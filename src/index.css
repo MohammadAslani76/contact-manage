@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: "Vazir";
+    src: url("assets/Vazir-font/Vazir.eot");
+    src: url("assets/Vazir-font/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("assets/Vazir-font/Vazir.woff2") format("woff2"),
+    url("assets/Vazir-font/Vazir.woff") format("woff"),
+    url("assets/Vazir-font/Vazir.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    font-family: "Vazir","Tahoma","sans-serif";
+    background-color: #282a36;
+}
+.Toastify__toast-body {
+    font-family: "Vazir","Tahoma","sans-serif";
+}
+.inputs{
+    @apply bg-CurrentLine px-3 py-1 placeholder:text-Foreground outline-0 w-60 text-Foreground;
+}
+.btn{
+    @apply px-2 py-1 rounded;
+}
+.textContainer{
+    @apply flex gap-1 justify-center items-center bg-gray-300 p-2 flex-wrap;
 }
